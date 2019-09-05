@@ -64,3 +64,11 @@ Kör
     | email      | varchar(255)     | NO   | UNI | NULL    |                |
     +------------+------------------+------+-----+---------+----------------+
     6 rows in set (0.00 sec)
+
+## Skapa data i databasen
+
+    INSERT INTO users (name, password, created_at, updated_at, email) VALUES ("username", "password", now(), now(), "username@test.se");
+    
+    INSERT INTO tweet (body, created_at, updated_at, user_id) VALUES ("Hello world", now(), now(), 1);
+
+    SELECT tweet.*. users.name FROM tweet JOIN users ON tweet.user_id = users.id;
