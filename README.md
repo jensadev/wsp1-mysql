@@ -53,3 +53,14 @@ Kör
     ALTER TABLE users ADD created_at TIMESTAMP NULL, ADD updated_at TIMESTAMP NULL;
 
     DESCRIBE users;
+    +------------+------------------+------+-----+---------+----------------+
+    | Field      | Type             | Null | Key | Default | Extra          |
+    +------------+------------------+------+-----+---------+----------------+
+    | id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+    | name       | varchar(32)      | NO   |     | NULL    |                |
+    | password   | varchar(255)     | NO   |     | NULL    |                |
+    | created_at | timestamp        | YES  |     | NULL    |                |
+    | updated_at | timestamp        | YES  |     | NULL    |                |
+    | email      | varchar(255)     | NO   | UNI | NULL    |                |
+    +------------+------------------+------+-----+---------+----------------+
+    6 rows in set (0.00 sec)
