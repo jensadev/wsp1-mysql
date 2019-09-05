@@ -72,3 +72,28 @@ Kör
     INSERT INTO tweet (body, created_at, updated_at, user_id) VALUES ("Hello world", now(), now(), 1);
 
     SELECT tweet.*. users.name FROM tweet JOIN users ON tweet.user_id = users.id;
+
+## Exportera databasen
+
+    mysqldump -u USERNAME -p DATABASENAME > FILENAME.sql
+
+## Importera databasen
+
+Se först till att det finns en databas med det namn du ska importera till, i mysql
+
+    create database DATABASENAME;
+
+Sedan så går du ur mysql (exit) och kör från prompten
+
+    mysql -u USERNAME -p DATABASENAME < FILENAME.sql
+
+Starta sedan mysql och välj och kolla att din data har importerats. Vill du testa så ladda ned torsdag.sql från detta repo.
+
+    cd
+    cd code
+    mkdir jensgit
+    cd jensgit
+    git clone https://github.com/jensnti/wsp1-mysql.git
+    cd wsp1-mysql
+
+Följ sedan instruktionera ovan för att importera. glhf :)
