@@ -71,7 +71,7 @@ Kör
     
     INSERT INTO tweet (body, created_at, updated_at, user_id) VALUES ("Hello world", now(), now(), 1);
 
-    SELECT tweet.*. users.name FROM tweet JOIN users ON tweet.user_id = users.id;
+    SELECT tweet.*, users.name FROM tweet JOIN users ON tweet.user_id = users.id;
 
 ## Exportera databasen
 
